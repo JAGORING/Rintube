@@ -1,0 +1,22 @@
+.header {
+  background-color: rgb(37, 37, 37);
+  padding: 0.6em 13%;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-basis: 20%;
+}
+.header img {
+  margin-right: 0.6em;
+  width: 3.3em;
+}
+.search {
+  flex-basis: 80%;
+}
