@@ -12,10 +12,11 @@
   display: flex;
   align-items: center;
   flex-basis: 20%;
+  margin-right: 0.6em;
 }
 .header img {
-  margin-right: 0.6em;
   width: 3.3em;
+  margin-right: 0.6em;
 }
 .search {
   flex-basis: 80%;
