@@ -3,13 +3,11 @@ import VideoItem from '../VideoItem/VideoItem';
 
 import styles from './VideoList.module.css';
 
-const videoItems = [];
-
-const VideoList = () => {
+const VideoList = (props) => {
   return (
-    <ul>
-      {videoItems.map((item) => (
-        <VideoItem item={item} />
+    <ul className={styles.list}>
+      {props.list.map((item) => (
+        <VideoItem key={item.id} video={item} />
       ))}
     </ul>
   );

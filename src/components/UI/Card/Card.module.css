@@ -1,0 +1,12 @@
+.card {
+  border-radius: 5px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.096), 0 3px 5px rgba(0, 0, 0, 0.096);
+  transition: 0.5s;
+  display: flex;
+  height: 7em;
+  padding: 0.5em;
+}
+.card:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.096);
+}
