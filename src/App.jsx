@@ -7,6 +7,7 @@ import styles from './App.module.css';
 const App = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
   const [videos, setVideos] = useState([]);
+  const [keyword, setKeyword] = useState('');
 
   useEffect(() => {
     const requestOptions = {
@@ -24,6 +25,9 @@ const App = () => {
       .catch((error) => console.log('error', error));
   }, []);
 
+  const searchHandler = (keyword) => {
+    setKeyword(keyword);
+  };
   return (
     <>
       <header className={styles.header}>
@@ -34,8 +38,9 @@ const App = () => {
           />
           <h2>YOUTUBE</h2>
         </div>
-        <VideoSearch className={styles.search} />
+        <VideoSearch className={styles.search} onSearch={searchHandler} />
       </header>
+
       <VideoList list={videos} />
     </>
   );

@@ -1,12 +1,14 @@
 .card {
-  border-radius: 5px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.096), 0 3px 5px rgba(0, 0, 0, 0.096);
-  transition: 0.5s;
   display: flex;
-  height: 7em;
-  padding: 0.5em;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: 0.5s;
+  padding: 0.5rem;
+  height: 100%;
 }
 .card:hover {
+  transform: scale(1.01);
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.096);
 }

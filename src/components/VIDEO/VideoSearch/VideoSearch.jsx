@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './VideoSearch.module.css';
 
-const VideoSearch = () => {
+const VideoSearch = (props) => {
+  const [searchInput, setSearchInput] = useState('');
+
+  const searchInputHandler = (event) => {
+    setSearchInput(event.target.value);
+  };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    props.onSearch(searchInput.trim());
+    setSearchInput('');
+  };
+
   return (
-    <div className={styles.search}>
-      <input type='text' placeholder='Search' />
-      <button type='button' className={styles.button}>
+    <form className={styles.search} onSubmit={submitHandler}>
+      <input
+        type='text'
+        placeholder='Search'
+        value={searchInput}
+        onChange={searchInputHandler}
+      />
+      <button type='submit' className={styles.button}>
         <img
           src={process.env.PUBLIC_URL + '/images/search.png'}
           alt='youtube logo'
         />
       </button>
-    </div>
+    </form>
   );
 };
 

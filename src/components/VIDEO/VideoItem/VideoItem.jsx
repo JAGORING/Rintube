@@ -11,9 +11,9 @@ const VideoItem = (props) => {
           src={props.video.snippet.thumbnails.medium.url}
           alt={props.video.snippet.title}
         />
-        <div className={styles.title}>
-          <h1>{props.video.snippet.title}</h1>
-          <h2>{props.video.snippet.channelTitle}</h2>
+        <div className={styles.titleBox}>
+          <p className={styles.title}>{props.video.snippet.title}</p>
+          <p className={styles.channel}>{props.video.snippet.channelTitle}</p>
         </div>
       </Card>
     </li>

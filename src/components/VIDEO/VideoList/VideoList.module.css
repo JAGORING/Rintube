@@ -1,9 +1,14 @@
 .list {
-  width: 100vw;
+  width: 80vw;
   padding: 0;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 58rem) {
+  .list {
+    flex-direction: column;
+  }
 }
