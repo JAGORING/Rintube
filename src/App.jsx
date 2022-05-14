@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import VideoSearch from './components/VIDEO/VideoSearch/VideoSearch';
+import VideoSearchHeader from './components/VIDEO/VideoSearchHeader/VideoSearchHeader';
 import VideoList from './components/VIDEO/VideoList/VideoList';
 import styles from './App.module.css';
 
@@ -27,20 +27,25 @@ const App = () => {
 
   const searchHandler = (keyword) => {
     setKeyword(keyword);
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow',
+    };
+    fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${keyword}&regionCode=KR&type=video&key=${apiKey}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        setVideos(
+          result.items.map((item) => ({ ...item, id: item.id.videoId }))
+        );
+      })
+      .catch((error) => console.log('error', error));
   };
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <img
-            src={process.env.PUBLIC_URL + '/images/logo.png'}
-            alt='youtube logo'
-          />
-          <h2>YOUTUBE</h2>
-        </div>
-        <VideoSearch className={styles.search} onSearch={searchHandler} />
-      </header>
-
+      <VideoSearchHeader className={styles.search} onSearch={searchHandler} />
       <VideoList list={videos} />
     </>
   );
