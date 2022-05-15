@@ -1,14 +1,24 @@
-.list {
-  width: 80vw;
+.container {
   padding: 0;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
+}
+.list_player {
+  width: 36rem;
+  margin: 0.6rem;
+  flex-direction: column;
+}
+.list {
+  width: 80%;
   margin: 1rem auto;
 }
 
 @media screen and (max-width: 58rem) {
   .list {
     flex-direction: column;
+  }
+  .list_player {
+    width: 100%;
   }
 }

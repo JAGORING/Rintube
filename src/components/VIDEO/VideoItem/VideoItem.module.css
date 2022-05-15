@@ -2,8 +2,12 @@
   width: 50%;
   padding: 0.2em;
 }
-
-.item img {
+.item_player {
+  width: 100%;
+  padding: 0.2em;
+}
+.item img,
+.item_player img {
   width: 40%;
   height: 100%;
 }
@@ -23,5 +27,9 @@
 @media screen and (max-width: 58rem) {
   .item {
     width: 100%;
+  }
+  .item_player img {
+    width: 30%;
+    height: 100%;
   }
 }

@@ -4,8 +4,14 @@ import styles from './VideoItem.module.css';
 import Card from '../../UI/Card/Card';
 
 const VideoItem = (props) => {
+  const videoClickHandler = () => {
+    props.onClickVideo(props.video);
+  };
   return (
-    <li className={styles.item}>
+    <li
+      className={props.isPlayer ? styles.item_player : styles.item}
+      onClick={videoClickHandler}
+    >
       <Card>
         <img
           src={props.video.snippet.thumbnails.medium.url}
