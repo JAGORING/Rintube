@@ -18,7 +18,10 @@ const App = ({ youtube }) => {
   const searchHandler = (keyword) => {
     youtube
       .search(keyword) //
-      .then((items) => setVideos(items));
+      .then((items) => {
+        setVideos(items);
+        setVideoPlayer(null);
+      });
   };
 
   const VideoClick = (video) => {
