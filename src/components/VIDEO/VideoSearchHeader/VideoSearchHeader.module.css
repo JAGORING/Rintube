@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 58rem) {
+@media screen and (max-width: 65rem) {
   .search input {
     font-size: 1rem;
   }

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 import styles from './VideoSearchHeader.module.css';
 
-const VideoSearchHeader = (props) => {
+const VideoSearchHeader = memo((props) => {
   const [searchInput, setSearchInput] = useState('');
 
   const searchInputHandler = (event) => {
@@ -13,7 +13,6 @@ const VideoSearchHeader = (props) => {
     props.onSearch(searchInput.trim());
     setSearchInput('');
   };
-
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -39,6 +38,6 @@ const VideoSearchHeader = (props) => {
       </form>
     </header>
   );
-};
+});
 
 export default VideoSearchHeader;

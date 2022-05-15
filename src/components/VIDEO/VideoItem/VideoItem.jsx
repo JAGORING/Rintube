@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './VideoItem.module.css';
 import Card from '../../UI/Card/Card';
 
-const VideoItem = (props) => {
+const VideoItem = memo((props) => {
   const videoClickHandler = () => {
     props.onClickVideo(props.video);
   };
+  console.log(`${props.video.snippet.title}`);
   return (
     <li
       className={props.isPlayer ? styles.item_player : styles.item}
@@ -24,6 +25,6 @@ const VideoItem = (props) => {
       </Card>
     </li>
   );
-};
+});
 
 export default VideoItem;

@@ -4,9 +4,9 @@ import styles from './VideoPlayer.module.css';
 
 const VideoPlayer = (props) => {
   const [isShowMore, setIsShowMore] = useState(false);
-  const textContent = props.video.snippet.description;
 
   const preContent = useMemo(() => {
+    const textContent = props.video.snippet.description;
     const shortPre = props.video.snippet.description.slice(0, 50);
 
     if (textContent.length > 50) {
@@ -16,7 +16,7 @@ const VideoPlayer = (props) => {
       return shortPre;
     }
     return textContent;
-  }, [isShowMore, textContent]);
+  }, [isShowMore, props]);
 
   const showMoreHandler = () => {
     setIsShowMore(!isShowMore);
@@ -27,10 +27,11 @@ const VideoPlayer = (props) => {
       <div className={styles.container}>
         <iframe
           className={styles.video}
+          title='youtube video player'
           type='text/html'
           src={`https://www.youtube.com/embed/${props.video.id}`}
-          frameborder='0'
-          allowfullscreen
+          frameBorder='0'
+          allowFullScreen
         ></iframe>
       </div>
       <h1>{props.video.snippet.title}</h1>

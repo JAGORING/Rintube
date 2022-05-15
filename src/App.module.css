@@ -5,7 +5,7 @@
   margin: 1.3em auto;
 }
 
-@media screen and (max-width: 58rem) {
+@media screen and (max-width: 65rem) {
   .content {
     flex-direction: column;
   }

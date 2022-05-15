@@ -24,7 +24,7 @@
   margin-top: 0.3em;
 }
 
-@media screen and (max-width: 58rem) {
+@media screen and (max-width: 65rem) {
   .item {
     width: 100%;
   }

@@ -14,7 +14,7 @@
   margin: 1rem auto;
 }
 
-@media screen and (max-width: 58rem) {
+@media screen and (max-width: 65rem) {
   .list {
     flex-direction: column;
   }
