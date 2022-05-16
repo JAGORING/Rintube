@@ -8,12 +8,45 @@
   align-items: center;
 }
 .logo {
-  color: white;
+  color: rgb(236, 236, 236);
   display: flex;
   align-items: center;
   flex-basis: 15%;
   margin-right: 0.6rem;
+  transition: 0.4s;
 }
+.logo:hover {
+  cursor: pointer;
+  background: #222 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  background-size: 100px;
+  color: rgba(255, 255, 255, 0.3);
+  background-clip: text;
+  animation: logo 2s infinite;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+@keyframes logo {
+  0%,
+  10% {
+    background-position: 0px;
+  }
+  30% {
+    background-position: top left;
+  }
+  50% {
+    background-position: bottom right;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+
 .header img {
   width: 2.8rem;
   margin-right: 0.6rem;

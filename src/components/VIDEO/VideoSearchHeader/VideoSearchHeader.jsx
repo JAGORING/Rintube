@@ -13,14 +13,17 @@ const VideoSearchHeader = memo((props) => {
     props.onSearch(searchInput.trim());
     setSearchInput('');
   };
+  const logoClickHandler = () => {
+    props.onLogoClick();
+  };
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={logoClickHandler}>
         <img
           src={process.env.PUBLIC_URL + '/images/logo.png'}
           alt='youtube logo'
         />
-        <h2>YOUTUBE</h2>
+        <h2>RINTUBE</h2>
       </div>
       <form className={styles.search} onSubmit={submitHandler}>
         <input

@@ -3,6 +3,7 @@
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .list_player {
   width: 36rem;
@@ -10,11 +11,10 @@
   flex-direction: column;
 }
 .list {
-  width: 80%;
-  margin: 1rem auto;
+  width: 100%;
 }
 
-@media screen and (max-width: 65rem) {
+@media screen and (max-width: 60rem) {
   .list {
     flex-direction: column;
   }

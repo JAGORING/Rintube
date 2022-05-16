@@ -7,7 +7,6 @@ const VideoItem = memo((props) => {
   const videoClickHandler = () => {
     props.onClickVideo(props.video);
   };
-  console.log(`${props.video.snippet.title}`);
   return (
     <li
       className={props.isPlayer ? styles.item_player : styles.item}

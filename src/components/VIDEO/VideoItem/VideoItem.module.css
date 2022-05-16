@@ -1,5 +1,5 @@
 .item {
-  width: 50%;
+  width: calc(33% - 20px);
   padding: 0.2em;
 }
 .item_player {
@@ -24,7 +24,12 @@
   margin-top: 0.3em;
 }
 
-@media screen and (max-width: 65rem) {
+@media screen and (max-width: 85rem) {
+  .item {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 60rem) {
   .item {
     width: 100%;
   }

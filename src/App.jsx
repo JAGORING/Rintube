@@ -26,13 +26,25 @@ const App = ({ youtube }) => {
     },
     [youtube]
   );
+  const logoHandler = useCallback(() => {
+    youtube
+      .mostPopular() //
+      .then((items) => {
+        setVideos(items);
+        setVideoPlayer(null);
+      });
+  }, [youtube]);
 
   const VideoClick = (video) => {
     setVideoPlayer(video);
   };
   return (
     <>
-      <VideoSearchHeader className={styles.search} onSearch={searchHandler} />
+      <VideoSearchHeader
+        className={styles.search}
+        onSearch={searchHandler}
+        onLogoClick={logoHandler}
+      />
       <section className={styles.content}>
         {videoPlayer && (
           <VideoPlayer video={videoPlayer} className={styles.player} />
