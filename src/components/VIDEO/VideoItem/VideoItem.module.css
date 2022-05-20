@@ -1,6 +1,6 @@
 .item {
-  width: calc(33% - 20px);
-  padding: 0.2em;
+  width: calc(33% - 10px);
+  padding: 0.3em;
 }
 .item_player {
   width: 100%;
@@ -8,33 +8,47 @@
 }
 .item img,
 .item_player img {
-  width: 40%;
-  height: 100%;
+  max-width: 50%;
 }
 .titleBox {
+  width: 100%;
   margin-left: 0.7em;
   padding: 0;
+  overflow: hidden;
 }
 .title {
+  height: 2.6em;
+
   font-size: 0.9em;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: clip ellipsis;
 }
 .channel {
   font-size: 0.7em;
   margin-top: 0.3em;
 }
 
-@media screen and (max-width: 85rem) {
+@media screen and (max-width: 75rem) {
   .item {
-    width: calc(50% - 20px);
+    width: calc(50% - 15px);
+  }
+  .title {
+    font-size: 0.8em;
   }
 }
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 48rem) {
   .item {
     width: 100%;
   }
-  .item_player img {
-    width: 30%;
+  .title {
     height: 100%;
+    font-size: 0.8em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .item img,
+  .item_player img {
+    width: 35%;
   }
 }
