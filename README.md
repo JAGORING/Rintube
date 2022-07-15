@@ -3,6 +3,14 @@
 ## 개발 언어: React
 
 Youtube API를 이용해서 만들어본 React Youtube Clone페이지
+### main 페이지와 Video 페이지
+<div style="display: flex; flex-direction: row;">
+<img src="https://user-images.githubusercontent.com/62410160/179164939-670bda5c-e26c-4a20-a9d7-e1e9b65cef0a.png" alt="main 화면" width="300px" height="150px"/>
+<img src="https://user-images.githubusercontent.com/62410160/179164989-079df3fe-f18e-49f2-8642-ed41de5a7984.png" alt="video 화면" width="300px" height="150px" />
+</div>
+
+### 반응형 Video 페이지
+<img src="https://user-images.githubusercontent.com/62410160/179165052-86e74dcf-e2a0-49b7-98d5-b596d51a2faf.png" alt="video 반응형 화면" width="300px" />
 
 ### 구현 기능
 
