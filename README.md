@@ -14,3 +14,5 @@ Youtube API를 이용해서 만들어본 React Youtube Clone페이지
    - 영상 설명의 더보기와 간략히 버튼을 통해 detail 내용 확인
    - 오른쪽 추천 영상 목록 구현
    - 왼쪽 위 'Rintube' 로고 클릭 시 main 화면 이동
+4. 반응형 웹으로 구현
+   - video 화면 resize 시 비디오의 비율을 그대로 유지함
